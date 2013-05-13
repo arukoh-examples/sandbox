@@ -4,4 +4,8 @@ class Hola
     "Hello world!"
   end
 
+  def self.hello
+    "Hello world!"
+  end
+
 end
