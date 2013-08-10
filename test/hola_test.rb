@@ -4,7 +4,7 @@ require './lib/hola'
 class HolaTest < Test::Unit::TestCase
 
   def test_hi
-    assert_equal "Hello world!!", Hola.hi
+    assert_equal "Hello world!", Hola.hi
   end
 
   def test_hello
