@@ -1,6 +1,8 @@
 language: ruby
 
 env:
+  global:
+    - secure: "Vl4wZ31VKVsF+w2Vowv1l/hC6p1a7BR8mwonSswcvpdbmz289dFE7oUW7gw3nwzE1lRe71Soh90YqMnGmMY6UASRWHMkDLbf4BACkt4jJKSfQyWRf+J1YmHS8l1lrhk6V+RUsQjNdGbOkuZ5PQVzpwsPzHut4UgrxuLfpW9SkIg="
   matrix:
     - FOO=foo BAR=bar
 
