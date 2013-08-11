@@ -10,8 +10,4 @@ class EnvTest < Test::Unit::TestCase
     assert_equal "bar", ENV['BAR']
   end
 
-  def password
-    assert_equal "secret", ENV['password']
-  end
-
 end

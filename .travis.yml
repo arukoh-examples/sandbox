@@ -3,8 +3,6 @@ language: ruby
 env:
   matrix:
     - FOO=foo BAR=bar
-  password:
-    secure: "UL6GQyb7HlB2uUBXOnht5di06bdtW9V5TjWaIHjsjHkB9Fqh9vh83GNasDufyCLDW5UXfH+BtDKmeA+ZbOJj85JxniGxDOd5rlBf7T0KwmAwBhH+3GAULWHm0SYgwwWLF4CeBIG+SYwLqwvJGQoEvWw495JKrbPRLBASXL4iDQQ="
 
 before_script:
   - echo "==== START ===="
@@ -15,11 +13,9 @@ before_install:
   - gem install bundler
 
 rvm:
- - 1.8.7
  - 1.9.2
  - 1.9.3
  - 2.0.0
- - ree
 
 notifications:
   email: false
