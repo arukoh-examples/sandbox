@@ -4,7 +4,7 @@ env:
   matrix:
     - FOO=foo BAR=bar
   secret:
-    secure: "GWzIHf6koluZDwn8Q6rHEhspD2ZgWXYUcBUD8zd4piHlZ5egE2omQrB9g+D1yyQZz6c2nAsyG1FFHTF81OmNxZqZCLliPh9fH2q0AQILgJiqjW03P0xA8AuJObQOfOCX3Qw9zwanbJ5g1egvdTtc2yGGThhTDQXF2Ph2tX6JXpo="
+    - secure: "GWzIHf6koluZDwn8Q6rHEhspD2ZgWXYUcBUD8zd4piHlZ5egE2omQrB9g+D1yyQZz6c2nAsyG1FFHTF81OmNxZqZCLliPh9fH2q0AQILgJiqjW03P0xA8AuJObQOfOCX3Qw9zwanbJ5g1egvdTtc2yGGThhTDQXF2Ph2tX6JXpo="
 
 before_script:
   - echo "==== START ===="
