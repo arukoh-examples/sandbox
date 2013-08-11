@@ -3,13 +3,19 @@ language: ruby
 env:
   global:
     - secure: "Vl4wZ31VKVsF+w2Vowv1l/hC6p1a7BR8mwonSswcvpdbmz289dFE7oUW7gw3nwzE1lRe71Soh90YqMnGmMY6UASRWHMkDLbf4BACkt4jJKSfQyWRf+J1YmHS8l1lrhk6V+RUsQjNdGbOkuZ5PQVzpwsPzHut4UgrxuLfpW9SkIg="
+    - secure: "RZUrAgwna006v+zvD2hsEazhEn/R92mGfVyRXX7ljGpPW2xoEE5GKpIzzeRS7j5b12Dxodx2dYzJTw8U9m+90LyT3vDCYanwdVRw+CGfVUUlWzwBjwBeijFu/hcPa9N860oBZuufRZXs/W797JpBR30UH5ZJ2TcMfUqX/TTT/Ts="
+    - secure: "QPsbRK7gElLEqA9EpwPigHkkhqiPhBSRvDOyFmtWQr4lFXiH0Ni/ft7iSSyhSaz7BKWALxuU3wwROV1c4ehVfPKoeUi65lYINUYPkThzI3k3woE+TP6H66DlPaHzhQC8A6Q7bxunV1uLtHwdJacfQo+gnPGgIPuLisvQKvw5y6Q="
   matrix:
     - FOO=foo BAR=bar
 
 before_script:
   - echo "==== START ===="
+  - sudo apt-get install -y s3cmd
 after_script:
   - echo "====  END  ===="
+  - echo "access_key = $TRAVIS_AWS_ACCESS_KEY_ID" >> .s3cfg
+  - echo "secret_key = $TRAVIS_AWS_SECRET_ACCESS_KEY" >> .s3cfg
+  - s3cmd sync -r -P --delete-removed --config=.s3cfg coverage/ s3://arukoh-travis-builds/sandbox/coverage/
 
 before_install:
   - gem install bundler
