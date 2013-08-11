@@ -1,7 +1,10 @@
 language: ruby
 
 env:
-  - FOO=foo BAR=bar
+  matrix:
+    - FOO=foo BAR=bar
+  password:
+    secure: "UL6GQyb7HlB2uUBXOnht5di06bdtW9V5TjWaIHjsjHkB9Fqh9vh83GNasDufyCLDW5UXfH+BtDKmeA+ZbOJj85JxniGxDOd5rlBf7T0KwmAwBhH+3GAULWHm0SYgwwWLF4CeBIG+SYwLqwvJGQoEvWw495JKrbPRLBASXL4iDQQ="
 
 before_script:
   - echo "==== START ===="
