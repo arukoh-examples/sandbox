@@ -10,4 +10,8 @@ class EnvTest < Test::Unit::TestCase
     assert_equal "bar", ENV['BAR']
   end
 
+  def test_secret
+    assert_equal "super_secret", ENV['secret']
+  end
+
 end
