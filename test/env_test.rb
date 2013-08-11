@@ -2,11 +2,11 @@ require 'test/unit'
 
 class EnvTest < Test::Unit::TestCase
 
-  def foo
+  def test_foo
     assert_equal "foo", ENV['FOO']
   end
 
-  def bar
+  def test_bar
     assert_equal "bar", ENV['BAR']
   end
 
