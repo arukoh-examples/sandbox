@@ -26,7 +26,7 @@ rvm:
  - 2.1.0
 
 notifications:
-  email: false
+  email: true
 #  email:
 #    recipients:
 #      - one@example.com
