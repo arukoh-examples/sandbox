@@ -1,7 +1,7 @@
 class Hola
 
   def self.hi
-    "Hello world!"
+    "Hello world!!"
   end
 
   def self.hello
